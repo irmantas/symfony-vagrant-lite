@@ -61,7 +61,8 @@ class dev-packages {
 	    ensure => link,
 		target => "/vagrant/www/web",
 		notify => Service["apache2"],
-		force  => true
+		force  => true,
+		require => Service["apache2"]
   	}
 }
 
